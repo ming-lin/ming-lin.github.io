@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>模仿饭否</title>
+  <style type="text/css">
+
+  .head{
+    width: 800px;
+    height: 40px;
+    line-height: 40px;
+    background-color: grey;
+    position: relative;
+    margin: 0 auto;
+    text-indent: 2em;
+  }
+
+table{
+    width: 800px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    margin: 10px auto;
+  }
+  ul{list-styel:none; margin:0;padding:0;}
+  li{float:right; display:inline; margin-right:8px;}
+
+  a:hover{
+    background-color: purple;
+}
+  .box{
+    /*border:1px dotted grey;*/
+    width:800px;
+    height: 900px;
+    position:relative;
+    margin:10px auto;
+  }
+  .box1{/*left side*/
+    border-right: 1px dotted grey;
+    width: 500px;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    left:0;
+  }
+  .box2{/*right side*/
+    width: 300px;
+    height: 900px;
+    background-color: grey;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .box3{
+    border-right: 1px solid black;
+    width: 100px;
+    height: 40px;
+    float:left;
+
+  }
+  .box4{
+    background-color: white;
+    width:270px;
+    height:80px;
+    position: relative;
+    margin: 40px auto;
+
+  }
+  .box5{
+    border-top:1px dotted grey;
+    border-bottom: 1px dotted grey;
+    width:460px;
+    height: 80px;
+    margin: 20px auto auto 0;
+    padding:2px;
+
+  }
+
+  .bottom{
+    width: 800px;
+    height: 40px;
+    line-height: 40px;
+    background-color: grey;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+  a.touxiang:before{
+    content: url("muke1.PNG");
+  }
+  </style>
+</head>
+
+<body>
+  <div class="head"><h2>否饭</h2></div>
+  <div>
+  <table><tbody><tr><td>
+    <ul>
+        <li><a href="#">退出</a></li>
+        <li><a href="#">设置</a></li>
+        <li><a href="#">搜索</a></li>
+        <li><a href="#">随便看看</a></li>
+        <li><a href="#">找人</a></li>
+        <li><a href="#">私信</a></li>
+        <li><a href="#">我的空间</a></li>
+        <li><a href="#">首页</a></li>
+    </ul>
+  </td></tr></tbody></table>
+  </div>
+  <div class="box">
+    <div class="box1">
+      <form>
+      <label>你在做什么？</label>
+      <br/><br/>
+      <textarea cols="65" rows="5">在这里输入内容...</textarea>
+      <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140</label>
+      <input type="submit" value="发送"  name="submit" />
+      <br/>
+      <br/>
+    </form>
+    <div class= "box5">
+      <img src ='muke1.PNG'><a href="#">慕课</a>&nbsp;暗淡轻黄体性柔，情疏迹远只香留。何须浅碧深红色，自是花中第一流。
+这是李清照《咏桂》中的词句，在李清照看来，桂花暗淡青黄，性情温柔，淡泊自适，远比那些大红大紫争奇斗艳花值得称道。
+    </div>
+  <!--用JS实现-->
+  <script type="text/javascript">
+  for(var i=0;i<5;i++){
+    document.write("<div class='box5'><a class='touxiang' href='#'>慕课</a>&nbsp;暗淡轻黄体性柔，情疏迹远只香留。何须浅碧深红色，自是花中第一流。这是李清照《咏桂》中的词句，在李清照看来，桂花暗淡青黄，性情温柔，淡泊自适，远比那些大红大紫争奇斗艳花值得称道。</div>");
+}
+  </script>
+    </div>
+
+    <div class="box2">
+       <img src ="foufan.PNG"><br/>
+       &nbsp;&nbsp;<a href="#">Ming</a><br/><br/>
+       <div class="box3"><li><a href="#">20<br/>我关注的人</a></li></div>
+       <div class="box3"><li><a href="#">20<br/>关注我的人</a></li></div>
+       <li><a href="#">20<br/>我的消息</a></li><br/>
+       <p class="box4"><a href="#">饭否小工具集锦</a><br/>
+        包括饭友生日、马闹钟、时间线清理工具（去年今日）、头像仓库等小工具。</p>
+        &nbsp;&nbsp;<a href="#">@提到我的</a><br/><br/>
+        &nbsp;&nbsp;<a href="#">私信</a><br/><br/>
+        &nbsp;&nbsp;<a href="#">收藏</a><br/><br/>
+        &nbsp;&nbsp;<a href="#">照片</a><br/><br/>
+  <form>
+    &nbsp;&nbsp;
+    <input type="sousuo" id="sousuo" placeholder=" ">
+    <input type="submit" value="搜索"  name="submit" />
+  </form><br/>
+  <hr/>
+  <h3>&nbsp;&nbsp;邀请朋友加入</h3>
+  <p>&nbsp;&nbsp;把下面的网址通过把下面的网址通过<br/>&nbsp;&nbsp;MSN/QQ发送给朋友<br/>
+  &nbsp;&nbsp;http://fanfou.com/register
+  </p>
+  <p>&nbsp;&nbsp;或者<address>&nbsp;&nbsp;<a href="fanfou/finder#finder_invite">发Email邀请朋友</a></address>
+  </p>
+  </div>
+  </div>
+
+  <div class="bottom"><address><a href="mailto:kaixinjiandan@gmail.com">关于</a></address></div>
+
+</body>
+</html>

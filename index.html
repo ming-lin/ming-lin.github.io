@@ -2,45 +2,61 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>IFE Task</title>
+  <title>ming</title>
 <style type="text/css">
 body{
-  background-color: #eee;
+
+  margin: 0;
+  background-color: #CFD8DC;
+  font-family:Georgia,serif;
 }
-.backgroundtt{
+
+.container{
   padding: 0;
-  margin: 20px;
-  min-width: 500px;
-  background-color: #eee;
+  margin: 0;
+  min-width: 700px;
+  border: 0px solid #999;
 }
-.footertt{
-  border-top: 1px solid #999;
-  height: 100px;
+ /*清除浮动*/
+    .clearfix {
+        overflow: auto;
+    }
+
+.left_content{
+  border: 0px solid #999;
   padding: 20px;
-  margin-bottom: 10px;
-  background-color: #F6F4EC;
+  width: 200px;
+  height: 900px;
+  background-color: #ADC9B2;
+  position: fixed;
+
 
 }
-.left_content{
+.middle_content{
   padding: 20px;
-  border-right:1px solid #999;
-  float: left;
+  border-right:0px solid #999;
+  margin-left: 240px;
+  margin-right: 340px;
+
 }
 .right_content{
-  border-left: 1px solid #999;
-  background-color: #ADC9B2;
+
+  background-color: #E3EDF6;
   padding: 20px;
   width: 300px;
   float: right;
+}
+.weixin{
+  border: 1px solid green;
+  width: 176px;
+  height: 176px;
+  margin: 11px;
+  bottom: 0;
 }
 
 
 </style>
 <script type="text/javascript">
-function open(){
-             window.open('http://www.imooc.com','_blank');
-         }
-
 </script>
 
 </head>
@@ -48,8 +64,36 @@ function open(){
 
 
 <body>
-<div class="background">
+<div class="container clearfix">
 <div class="left_content">
+
+   <div>
+     <ul>
+       <li><a href="mailto:kaixinjiandan@gmail.com">Email</a></li><br/>
+       <li>微信</li>
+     </ul>
+   </div>
+    <div class="weixin"><img src="img/wx.png"></div><br/>
+    <h4>小试验</h4>
+    <a href="my/foufan/foufan.html" target="my/foufan/foufan.html">第一个网页——模仿饭否</a>
+
+
+
+
+
+
+
+</div>
+
+<div class="right_content">
+
+    <h2>常用链接</h2>
+    <p><a href="https://github.com/baidu-ife/ife/tree/master/2015_spring/task/task0001" target="https://github.com/baidu-ife/ife/tree/master/2015_spring/task/task0001">ife 2015 HTML、CSS基础</a></p>
+    <p><a href="http://ife.baidu.com/static/warmup.html" target="http://ife.baidu.com/static/warmup.html">warm up</a></p>
+  </div>
+
+
+<div class="middle_content">
   <a href="https://github.com/SpringOfTeam/spring" target="https://github.com/SpringOfTeam/spring "><img src="task/task3/tlogo.png"></a>
   <a href="https://github.com/ming-lin/ming-lin.github.io" target="https://github.com/ming-lin/ming-lin.github.io "><img src="task/task3/plogo.png"></a>
   <a href="http://gongmiaomiao.github.io" target="http://gongmiaomiao.github.io"><img src="task/task3/mm.png"></a>
@@ -61,17 +105,13 @@ function open(){
   <p><a href="http://ife.baidu.com/task/detail?taskId=3" target="http://ife.baidu.com/task/detail?taskId=3">任务三：三栏式布局</a>
   <a href="https://github.com/ming-lin/ming-lin.github.io/tree/master/task/task3" target="https://github.com/ming-lin/ming-lin.github.io/tree/master/task/task3">代码</a> <a href="task/task3/3.html" target="task/task3/3.html">演示</a>
   </p>
+
+
   </div>
 
-  <div class="right_content">
-    <h3>常用链接</h3>
-    <p><a href="https://github.com/baidu-ife/ife/tree/master/2015_spring/task/task0001" target="https://github.com/baidu-ife/ife/tree/master/2015_spring/task/task0001">ife 2015 HTML、CSS基础</a></p>
-    <p><a href="http://ife.baidu.com/static/warmup.html" target="http://ife.baidu.com/static/warmup.html">warm up</a></p>
-  </div></div>
 
 
-  <div class="footer"></div>
 
-
+  </div>
 </body>
 </html>
