@@ -79,10 +79,13 @@ border: 1px solid red;}
 .c6{font-size: 13px;padding-top: 100px; text-align: center;}
 .c6 p{ padding-bottom: 6px;border-bottom: 2px solid red; display: inline-block;  }
 .text { margin-top: 60px;text-align: left; width: 320px; display: inline-table;}
-.info{text-align: left;width: 690px; margin-top: 70px;margin-left: 50px; display: inline-table; }
+.info{text-align: left;width: 690px; margin-top: 70px;margin-left: 50px; display: inline-table;}
+.info input {width: 200px;height: 30px;outline: 0 ;background-color: transparent;border: 0px;}
 .name{ width: 300px;height: 30px;line-height: 30px;background-color: #EDEDEF;margin-right: 15px;margin-bottom: 10px;
 display: inline-block; }
-.live{ width: 635px;height: 90px; background-color: #EDEDEF;margin-bottom: 10px;line-height: 30px;}
+.live{ width: 635px;height: 90px; background-color: #EDEDEF;margin-bottom: 10px;line-height: 30px;display:block;}
+.live input{width: 400px;height: 90px;outline: 0px ;background-color: transparent;border: 0px;
+  float: right;right: 70px;top:-30px;position: relative;}
 .submit{ width: 635px;height: 30px;line-height: 30px;background-color: #EDEDEF;text-align: center;margin-bottom: 160px; }
 .name, .live, .submit{ padding: 0 10px; }
 
@@ -93,8 +96,9 @@ input + input{ width: 70px;height: 39px;background-color: #33363F; margin-bottom
 .c7 img{ margin: 0 10px; display: inline-block; }
 
 
+
 .footer { height: 60px;background-color: #30303A; color: white;line-height: 60px;
- padding-left: 100px;padding-right: 50px;}
+ padding-left: 70px;padding-right: 50px;}
  .footer span{float: right;display: inline-block;}
 
 
