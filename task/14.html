@@ -52,9 +52,10 @@ var aqiData = [
 for(var k=0;k<aqiData.length;k++){
   if(aqiData[k][1]>60){
    var parent=document.getElementById("aqi-list");
+    var hanzi = ['一','二','三','四','五','六','七','八'];
    //var newli=document.createElement("li");//创建新li元素
    //parent.appendChild(newli);
-   parent.innerHTML+="<li>第"+(k+1)+"名："+aqiData[k][0]+", "+aqiData[k][1]+"</li>";
+   parent.innerHTML+="<li>第"+hanzi[k]+"名："+aqiData[k][0]+", "+aqiData[k][1]+"</li>";
    //newli.appendChild(document.createTextNode("第"+(k+1)+"名："+aqiData[k][0]+", "+aqiData[k][1]));
 
 
