@@ -29,19 +29,13 @@ function rightin() {
 }
 
 function leftout() {
-    n = document.getElementById("num").value;
-    if (!isNaN(n)) {
         alert(nums.shift());
         box();
-    }
 }
 
 function rightout() {
-    n = document.getElementById("num").value;
-    if (!isNaN(n)) {
         alert(nums.pop());
         box();
-    }
 }
 
 
