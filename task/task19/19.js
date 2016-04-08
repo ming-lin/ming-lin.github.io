@@ -55,6 +55,7 @@ function box() {
     var ul = document.createElement("ul");
     boxs.appendChild(ul);
     for (var i = 0; i < nums.length; i++) {
+        if(z===i){li.style.background="purple";}
         li= document.createElement("li");
         ul.appendChild(li);
         li.setAttribute("title",nums[i]);
@@ -78,7 +79,7 @@ function del(x) {
     }
     box();
 }
-
+var z;
 //可视化排序
 function sort(){
      for(var k=0;k<nums.length;k++){nums[k]=parseInt(nums[k]); }
@@ -100,7 +101,7 @@ function sort(){
    function sortslow(){
     if(i<nums.length){
         if(j<nums.length-i-1){
-            if(nums[j]>nums[j+1]){
+            if(nums[j]>nums[j+1]){ z=j+1;
                 exchange=nums[j];nums[j]=nums[j+1];nums[j+1]=exchange;
                 box();
             }
