@@ -1,8 +1,13 @@
 window.onload = function() {
 
     document.getElementById("search").setAttribute("onclick", "search()");
+    document.getElementById("word").setAttribute("onkeydown", "enterkey()");
 
 };
+//绑定enter键
+function enterkey(){
+    if(event.keyCode===13) { search();}
+}
 
 function search() {
 

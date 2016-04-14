@@ -8,7 +8,7 @@ window.onload = function() {
 var tags = [],
     n;
 //去除空格
-function  trim(str)  {      
+function  trim(str)  {  
     return str.replace(/[ ]/g, "");
 }
 //绑定按键 去重复
@@ -20,8 +20,10 @@ function check() {
         if (n.charAt(0) === ',' || n.charAt(0) === '，') { n = n.substring(1, n.length); }
         if (n.length > 0) {
             for (var i = 0; i < tags.length; i++) {
-                if (n === tags[i]) { n = '';
-                    document.getElementById("input").value = null; }
+                if (n === tags[i]) {
+                    n = '';
+                    document.getElementById("input").value = null;
+                }
             }
 
             if (n !== '') { leftin(); }
@@ -45,7 +47,11 @@ function box(y, x) {
         ul.appendChild(li);
         if (li.parentNode.parentNode === boxs) {
             li.setAttribute("onclick", "del(this)");
-        } else { li.setAttribute("onclick", "dele(this)"); }
+            li.style.background = "#8EC5F4";
+        } else {
+            li.setAttribute("onclick", "dele(this)");
+            li.style.background = "#FECC8F";
+        }
         li.setAttribute("onmouseover", "display(this)");
         li.setAttribute("onmouseout", "origindisplay(this)");
         li.innerHTML = x[i];
@@ -78,19 +84,21 @@ function dele(x) {
     box(result, interests);
 }
 
-var inner;
+var inner, innercolor;
 //鼠标经过样式
 function display(x) {
     inner = x.innerHTML;
+    innercolor = x.style.background;
+    console.log(innercolor);
     x.innerHTML = "删除" + inner;
     x.style.background = "red";
-    if (x.parentNode.parentNode === result) { x.style.background = "#FECC8F"; }
+    //if (x.parentNode.parentNode === result) {  }
 
 }
 //鼠标移开恢复样式
 function origindisplay(x) {
     x.innerHTML = inner;
-    x.style.background = "#8EC5F4";
+    x.style.background = innercolor;
 }
 
 var interests = [],
@@ -105,8 +113,8 @@ function out() {
     wordindex = [];
     var text = document.getElementById("text").value;
     console.log(text.length);
-//记录无效字符位置
-    if (!notword(text[0])) { wordindex.push(-1); }//开头特殊处理
+    //记录无效字符位置
+    if (!notword(text[0])) { wordindex.push(-1); } //开头特殊处理
     for (var i = 0; i < text.length; i++) {
 
         if (notword(text[i])) {
@@ -114,15 +122,15 @@ function out() {
             console.log(text[i]);
         }
     }
-    wordindex.push(text.length);//结尾特殊处理
-//获取有效文字
+    wordindex.push(text.length); //结尾特殊处理
+    //获取有效文字
     for (var i = 0; i < wordindex.length; i++) {
         if (wordindex[i + 1] - wordindex[i] > 1 && !same(i)) {
             if (interests.length >= 10) { interests.pop(); }
             interests.unshift(text.substring(wordindex[i] + 1, wordindex[i + 1]));
         }
     }
-//去重复
+    //去重复
     function same(i) {
         for (var j = 0; j < interests.length; j++) {
             if (text.substring(wordindex[i] + 1, wordindex[i + 1]) === interests[j]) {
