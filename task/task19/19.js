@@ -13,7 +13,7 @@ var nums = [56,85,30,23,168,89,127,41,19,35,119,12,64], n;
 //左侧入
 function leftin() {
     n = document.getElementById("num").value;
-    if (!isNaN(n)&&n.length>0&&n>0) {
+    if (!isNaN(n)&&n.length>0&&n>10&&n<100) {
         if(nums.length<60){
          nums.unshift(n);
          box();
@@ -24,7 +24,7 @@ function leftin() {
 //右侧入
 function rightin() {
     n = document.getElementById("num").value;
-    if (!isNaN(n)&&n.length>0&&n>0) {
+    if (!isNaN(n)&&n.length>0&&n>10&&n<100) {
         if(nums.length<60){
         nums.push(n);
         box();
