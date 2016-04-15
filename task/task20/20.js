@@ -41,7 +41,7 @@ function search() {
 
     //判断是不是文本、数字字符
     function notword(x) {
-        var n = (isNaN(x) && !(x.match(/^[A-Za-z\u4E00-\u9FA5]+$/)))|| (x === ' ');
+        var n = (isNaN(x) && !(x.match(/^[A-Za-z\u4E00-\u9FA5]+$/)))||x === ' '||x==='\n';
         return n;
     }
 
