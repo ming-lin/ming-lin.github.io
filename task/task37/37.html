@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>37 UI</title>
+    <script src="37.js"></script>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    #main {
+        height: 1000px;
+        z-index: 1;
+    }
+
+    #float {
+        min-width: 200px;
+        min-height: 100px;
+        position: fixed;
+        z-index: 3;
+        display: none;
+        background-color: #2F5643;
+    }
+
+    #cover {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2F5643;
+        opacity: 0.2;
+        z-index: 2;
+        display: none;
+    }
+
+    #close {
+        position: absolute;
+        right: 0;
+        height: 25px;
+        width: 50px;
+        display: block;
+    }
+
+    a:hover {
+        background-color: red;
+    }
+
+    #float p {
+        background: purple;
+        line-height: 25px;
+        cursor: move;
+    }
+
+    #resize-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 2px;
+        height: calc(100% - 25px);
+        background: black;
+        cursor: e-resize;
+    }
+
+    #resize-bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background: black;
+        cursor: s-resize;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <p>输入窗口高度：
+            <input type="text" id="height" placeholder="大于100" />
+        </p>
+        <p>输入窗口宽度：
+            <input type="text" id="width" placeholder="大于200" />
+        </p>
+        <button id="open">打开窗口</button>
+        <div id="cover">
+        </div>
+    </div>
+    <div id="float">
+        <a id="close">✖</a>
+        <p id="move">浮出层</p>
+        <br/>
+        <span id="fh"></span>
+        <span id="fw"></span>
+        <br/>
+        <span id="fp"></span>
+        <div id="resize-right"></div>
+        <div id="resize-bottom"></div>
+    </div>
+</body>
+
+</html>
